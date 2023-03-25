@@ -4,7 +4,7 @@ import './App.css';
 
 function App() {
 
-  const [message,setMessage]=useState(" ");
+
  const [messages,setMessages]=useState([]);
  const [isHidden,setIsHidden]=useState(true);
 
@@ -21,7 +21,7 @@ function App() {
       }
 
         
-        <button onClick={()=>{setMessage("MeNNNNNNNNNnaaaaaaaa");
+        <button onClick={()=>{
         setMessages(messages.concat("MeNNNNNNNNNnaaaaaaaa"))
         setIsHidden(false)
 
