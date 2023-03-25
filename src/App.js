@@ -1,23 +1,47 @@
-import logo from './logo.svg';
+
+import { useState} from 'react'
 import './App.css';
 
 function App() {
+
+  const [message,setMessage]=useState(" ");
+ const [messages,setMessages]=useState([]);
+ const [isHidden,setIsHidden]=useState(true);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="parent">
+
+
+       { messages.map((message)=> {return (<div className="message">
+          <h4>{message} <h3 className={isHidden?'hidden':'visible'}>&#128579;</h3></h4>
+
+        </div>)})
+        
+      }
+
+        
+        <button onClick={()=>{setMessage("MeNNNNNNNNNnaaaaaaaa");
+        setMessages(messages.concat("MeNNNNNNNNNnaaaaaaaa"))
+        setIsHidden(false)
+
+
+        
+      
+      
+      }
+      
+      
+      
+      }>
+        
+
+          Click Me
+        </button>
+
+        <h1 className={isHidden?'hidden':'highFont'}>&#128579;</h1>
+      </div>
+
     </div>
   );
 }
